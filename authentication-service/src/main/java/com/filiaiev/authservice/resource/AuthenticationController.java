@@ -1,6 +1,9 @@
-package com.filiaiev.authservice.controller;
+package com.filiaiev.authservice.resource;
 
-import com.filiaiev.authservice.controller.mapper.AuthenticationMapper;
+import com.filiaiev.authservice.resource.entity.JwtTokenRO;
+import com.filiaiev.authservice.resource.entity.UserLoginDetailsRO;
+import com.filiaiev.authservice.resource.entity.UserRegisterDetailsRO;
+import com.filiaiev.authservice.resource.mapper.AuthenticationMapper;
 import com.filiaiev.authservice.model.JwtToken;
 import com.filiaiev.authservice.model.user.UserLoginDetails;
 import com.filiaiev.authservice.model.user.UserRegisterDetails;
@@ -8,8 +11,6 @@ import com.filiaiev.authservice.service.AuthenticationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -23,7 +24,8 @@ public class AuthenticationController {
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
     public void register(@Valid @RequestBody UserRegisterDetailsRO userRegisterDetailsRO) {
-        UserRegisterDetails userRegisterDetails = authenticationMapper.mapUserRegisterDetailsROToUserRegisterDetails(userRegisterDetailsRO);
+        UserRegisterDetails userRegisterDetails = authenticationMapper.
+                mapUserRegisterDetailsROToUserRegisterDetails(userRegisterDetailsRO);
 
         authenticationService.register(userRegisterDetails);
     }

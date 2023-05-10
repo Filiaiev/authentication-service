@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class UserTokenDetails {
 
-    private long id;
+    private Integer id;
     private String email;
     private UserRole role;
 }

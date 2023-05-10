@@ -16,7 +16,7 @@ public class UserDO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Integer id;
     @NaturalId
     private String email;
     private String password;

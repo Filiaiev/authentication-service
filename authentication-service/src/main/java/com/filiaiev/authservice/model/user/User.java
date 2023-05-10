@@ -13,7 +13,7 @@ import java.util.Collections;
 @AllArgsConstructor
 public class User implements UserDetails {
 
-    private long id;
+    private Integer id;
     private String email;
     private String password;
     private UserRole role;

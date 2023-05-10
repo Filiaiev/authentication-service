@@ -1,4 +1,4 @@
-package com.filiaiev.authservice.controller;
+package com.filiaiev.authservice.resource.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

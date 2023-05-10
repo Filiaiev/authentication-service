@@ -9,4 +9,5 @@ public class UserRegisterDetails {
 
     private String email;
     private String password;
+    private CreateUserDetails userDetails;
 }
