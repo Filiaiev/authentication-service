@@ -6,13 +6,14 @@ import java.time.Instant;
 import java.time.LocalDate;
 
 @Data
-public class CreateUserDetails {
+public class UserDetails {
 
+    private Integer userId;
     private String firstName;
-    private String lastName;
     private String middleName;
-    private Gender gender;
+    private String lastName;
     private LocalDate dob;
+    private Gender gender;
     private String mobile;
     private String city;
     private String country;

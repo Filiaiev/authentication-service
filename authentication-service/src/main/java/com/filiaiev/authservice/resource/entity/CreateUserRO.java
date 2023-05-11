@@ -4,10 +4,9 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
-import org.hibernate.validator.constraints.Length;
 
 @Data
-public class UserRegisterDetailsRO {
+public class CreateUserRO {
 
     @Email
     private String email;

@@ -1,6 +1,6 @@
 package com.filiaiev.authservice;
 
-import com.filiaiev.authservice.repository.user.UserRoleDO;
+import com.filiaiev.authservice.repository.entity.UserRoleDO;
 import org.junit.jupiter.api.Test;
 
 public class CustomTest {

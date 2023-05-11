@@ -1,4 +1,4 @@
-package com.filiaiev.authservice.repository.user;
+package com.filiaiev.authservice.repository.entity;
 
 import jakarta.persistence.AttributeConverter;
 

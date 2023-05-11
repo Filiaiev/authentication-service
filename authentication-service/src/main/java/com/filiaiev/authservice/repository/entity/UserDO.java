@@ -1,4 +1,4 @@
-package com.filiaiev.authservice.repository.user;
+package com.filiaiev.authservice.repository.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -22,4 +22,6 @@ public class UserDO {
     private String password;
     @Convert(converter = UserRoleDOConverter.class)
     private UserRoleDO role;
+    @OneToOne(cascade = CascadeType.PERSIST, mappedBy = "user")
+    private UserDetailsDO userDetails;
 }
